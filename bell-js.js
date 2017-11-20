@@ -282,7 +282,7 @@ function halfDayTime(){
 	}  
 	else {
 		$('#period-half').html('School is out');
-		$('#period-half').html('');
+		$('#period-number-half').html('');
 	}
 }
 
