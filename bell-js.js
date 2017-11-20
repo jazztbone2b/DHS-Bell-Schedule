@@ -235,6 +235,7 @@ function fullDayTime(){
 	} 
 	else {
 		$('#period').html('School is out');
+		$('#period-number').html('');
 	}
 
 }
@@ -281,6 +282,7 @@ function halfDayTime(){
 	}  
 	else {
 		$('#period-half').html('School is out');
+		$('#period-half').html('');
 	}
 }
 
