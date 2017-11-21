@@ -208,7 +208,7 @@ function fullDayTime(){
 		$('#period-number').html('1');
 	} 
 	else if(h === 8 && m >= 40 || h === 9 && m < 26){
-		$('#period-number-half').html('2');
+		$('#period-number').html('2');
 	} 
 	else if(h === 9 && m >= 26 || h === 10 && m < 12){
 		$('#period-number').html('3');
