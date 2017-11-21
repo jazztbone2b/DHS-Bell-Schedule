@@ -288,18 +288,23 @@ function halfDayTime(){
 	}
 }
 
-$('#dropdown').click(function(){
-	$('#dropdown-content').toggle();
-	$('#display-schedule').hide();
-});
+function clickDropdown(){
+	$('#dropdown').click(function(){
+		$('#dropdown-content').toggle();
+		$('#display-schedule').hide();
+	});
+}
 
-$('#full').click(function(){
-	checkFullDay();
-});
+function clickFull(){
+	$('#full').click(function(){
+		checkFullDay();
+	});
+}
 
-$('#half').click(function(){
-	checkHalfDay();
-	$('#dropdown').html('Half Day');
-});
-
-window.onload = startTime(), checkFullDay(), fullDayTime(), halfDayTime();
+function clickHalf(){
+	$('#half').click(function(){
+		checkHalfDay();
+		$('#dropdown').html('Half Day');
+	});
+}
+window.onload = startTime(), checkFullDay(), fullDayTime(), halfDayTime(), clickDropdown(), clickFull(), clickHalf();
