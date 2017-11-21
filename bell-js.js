@@ -59,7 +59,7 @@ function startTime(){
 	}
 
 	let time = h + ':' + m;
-	$('#clock').html(time);
+	document.querySelector('#clock').innerHTML = time;
 
 	let t = setTimeout(function(){
 		startTime();
@@ -95,7 +95,7 @@ function checkFullDay(){
 
 		case 1:
 		day = 'Monday';
-		$('#day').html(day);
+		document.querySelector('#day').innerHTML = day;
 		break;
 		
 		case 2:
@@ -202,6 +202,7 @@ function fullDayTime(){
 
 	if(h === 7 && m >= 45 && m < 54){
 		$('#period-number').html('Homeroom');
+		$('#period-number').css('font-size', '28');
 	}
 	else if(h === 7 && m >= 54 || h === 8 && m < 40){
 		$('#period-number').html('1');
@@ -254,7 +255,8 @@ function halfDayTime(){
 	let time = h + ':' + m;
 
 	if(h === 7 && m >= 45 && m < 54){
-		$('#period-number').html('Homeroom');
+		$('#period-number-half').html('Homeroom');
+		$('#period-number-half').css('font-size', '28');
 	}
 	else if(h === 7 && m >= 54 || h === 8 && m < 28){
 		$('#period-number-half').html('1');
