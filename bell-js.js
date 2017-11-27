@@ -88,9 +88,6 @@ function checkFullDay(){
 		case 0:
 		day = 'Sunday';
 		$('#day').html(day);
-		$('#period').html("It's the weekend!");
-		$('#period').css('font-size', '32px');
-		$('#period-number').html('');
 		break;
 
 		case 1:
@@ -120,10 +117,6 @@ function checkFullDay(){
 
 		case 6:
 		day = 'Saturday';
-		$('#day').html(day);
-		$('#period').html("It's the weekend!");
-		$('#period').css('font-size', '32px');
-		$('#period-number').html('');
 		break;
 	}
 	fullDayTime();
@@ -144,9 +137,6 @@ function checkHalfDay(){
 		case 0:
 		day = 'Sunday';
 		$('#day').html(day);
-		$('#period-half').html("It's the weekend!");
-		$('#period-half').css('font-size', '32px');
-		$('#period-number-half').html('');
 		break;
 
 		case 1:
@@ -177,13 +167,9 @@ function checkHalfDay(){
 		case 6:
 		day = 'Saturday';
 		$('#day').html(day);
-		$('#period').html("It's the weekend!");
-		$('#period').css('font-size', '32px');
-		$('#period-number').html('');
 		break;
 	}
 	halfDayTime();
-
 }
 
 //return the appropriate schedule
@@ -191,15 +177,7 @@ function fullDayTime(){
 	let date = new Date();
 	let h = date.getHours();
 	let m = date.getMinutes();
-
-	m = checkTime(m);
 	
-	setTimeout(function(){
-		fullDayTime();
-	}, 500);
-
-	let time = h + ':' + m;
-
 	if(h === 7 && m >= 45 && m < 54){
 		$('#period-number').html('Homeroom');
 		$('#period-number').css('font-size', '28');
@@ -238,13 +216,13 @@ function fullDayTime(){
 		$('#period').html('School is out');
 		$('#period-number').html('');
 	}
-
 }
 
 function halfDayTime(){
 	let date = new Date();
 	let h = date.getHours();
 	let m = date.getMinutes();
+	let day = date.getDay();
 
 	m = checkTime(m);
 	
@@ -254,7 +232,12 @@ function halfDayTime(){
 
 	let time = h + ':' + m;
 
-	if(h === 7 && m >= 45 && m < 54){
+	if(day === 0 || day === 6){
+		$('#period-half').html("It's the weekend!");
+		$('#period-half').css('font-size', '32px');
+		$('#period-number-half').html('');
+	}
+	else if(h === 7 && m >= 45 && m < 54){
 		$('#period-number-half').html('Homeroom');
 		$('#period-number-half').css('font-size', '28');
 	}
