@@ -60,6 +60,7 @@ function startTime(){
 
 	let time = h + ':' + m;
 	document.querySelector('#clock').innerHTML = time;
+	console.log(time);
 
 	let t = setTimeout(function(){
 		startTime();
