@@ -60,7 +60,7 @@ function startTime(){
 
 	let time = h + ':' + m;
 	document.querySelector('#clock').innerHTML = time;
-	console.log(time);
+	//console.log(time);
 
 	let t = setTimeout(function(){
 		startTime();
@@ -178,8 +178,14 @@ function fullDayTime(){
 	let date = new Date();
 	let h = date.getHours();
 	let m = date.getMinutes();
+	let day = date.getDay();
 	
-	if(h === 7 && m >= 45 && m < 54){
+	if(day === 0 || day === 6){
+		$('#period').html("It's the weekend!");
+		$('#period').css('font-size', '32px');
+		$('#period-number').html('');
+	}
+	else if(h === 7 && m >= 45 && m < 54){
 		$('#period-number').html('Homeroom');
 		$('#period-number').css('font-size', '28');
 	}
@@ -217,6 +223,10 @@ function fullDayTime(){
 		$('#period').html('School is out');
 		$('#period-number').html('');
 	}
+
+	let t = setTimeout(function(){
+		fullDayTime();
+	}, 500);
 }
 
 function halfDayTime(){
@@ -224,14 +234,6 @@ function halfDayTime(){
 	let h = date.getHours();
 	let m = date.getMinutes();
 	let day = date.getDay();
-
-	m = checkTime(m);
-	
-	setTimeout(function(){
-		fullDayTime();
-	}, 500);
-
-	let time = h + ':' + m;
 
 	if(day === 0 || day === 6){
 		$('#period-half').html("It's the weekend!");
@@ -270,6 +272,10 @@ function halfDayTime(){
 		$('#period-half').html('School is out');
 		$('#period-number-half').html('');
 	}
+
+	let t = setTimeout(function(){
+		halfDayTime();
+	}, 500);
 }
 
 function clickDropdown(){
