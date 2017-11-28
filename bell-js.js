@@ -60,7 +60,6 @@ function startTime(){
 
 	let time = h + ':' + m;
 	document.querySelector('#clock').innerHTML = time;
-	//console.log(time);
 
 	let t = setTimeout(function(){
 		startTime();
@@ -186,37 +185,48 @@ function fullDayTime(){
 		$('#period-number').html('');
 	}
 	else if(h === 7 && m >= 45 && m < 54){
+		$('#period').html("Period:");
 		$('#period-number').html('Homeroom');
 		$('#period-number').css('font-size', '28');
 	}
 	else if(h === 7 && m >= 54 || h === 8 && m < 40){
+		$('#period').html("Period:");
 		$('#period-number').html('1');
 	} 
 	else if(h === 8 && m >= 40 || h === 9 && m < 26){
+		$('#period').html("Period:");
 		$('#period-number').html('2');
 	} 
 	else if(h === 9 && m >= 26 || h === 10 && m < 12){
+		$('#period').html("Period:");
 		$('#period-number').html('3');
 	} 
 	else if(h === 10 && m >= 12 && m < 58){
+		$('#period').html("Period:");
 		$('#period-number').html('4');
 	} 
 	else if(h === 10 && m >= 58 || h === 11 && m < 32){
+		$('#period').html("Period:");
 		$('#period-number').html('5E');
 	} 
 	else if(h === 11 && m >= 32 && m < 44){
+		$('#period').html("Period:");
 		$('#period-number').html('5L');
 	} 
 	else if(h === 11 && m >= 44 || h === 12 && m < 18){
+		$('#period').html("Period:");
 		$('#period-number').html('6E');
 	} 
 	else if(h === 12 && m >= 18 || h === 13 && m < 4){
+		$('#period').html("Period:");
 		$('#period-number').html('6L');
 	} 
 	else if(h === 13 && m >= 4 && m < 50){
+		$('#period').html("Period:");
 		$('#period-number').html('7');
 	} 
 	else if(h === 13 && m >= 50 || h === 14 && m < 32){
+		$('#period').html("Period:");
 		$('#period-number').html('8');
 	} 
 	else {
@@ -241,31 +251,40 @@ function halfDayTime(){
 		$('#period-number-half').html('');
 	}
 	else if(h === 7 && m >= 45 && m < 54){
+		$('#period-half').html("Period:");
 		$('#period-number-half').html('Homeroom');
 		$('#period-number-half').css('font-size', '28');
 	}
 	else if(h === 7 && m >= 54 || h === 8 && m < 28){
+		$('#period-half').html("Period:");
 		$('#period-number-half').html('1');
 	} 
 	else if(h === 8 && m >= 28 || h === 9 && m < 2){
+		$('#period-half').html("Period:");
 		$('#period-number-half').html('2');
 	} 
 	else if(h === 9 && m >= 2 && m < 36){
+		$('#period-half').html("Period:");
 		$('#period-number-half').html('3');
 	} 
 	else if(h === 9 && m >= 36 || h === 10 && m < 10){
+		$('#period-half').html("Period:");
 		$('#period-number-half').html('4');
 	} 
 	else if(h === 10 && m >= 10 && m < 44){
+		$('#period-half').html("Period:");
 		$('#period-number-half').html('5E/5L');
 	} 
 	else if(h === 10 && m >= 44 || h === 11 && m < 18){
+		$('#period-half').html("Period:");
 		$('#period-number-half').html('6E/6L');
 	} 
 	else if(h === 11 && m >= 18 && m < 52){
+		$('#period-half').html("Period:");
 		$('#period-number-half').html('7');
 	} 
 	else if(h === 11 && m >= 52 || h === 12 && m < 22){
+		$('#period-half').html("Period:");
 		$('#period-number-half').html('8');
 	}  
 	else {
