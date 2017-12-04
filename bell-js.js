@@ -187,8 +187,8 @@ function fullDayTime(){
 	}
 	else if(h === 7 && m >= 45 && m < 54){
 		$('#period').html("Period:");
-		$('#period-number').html('Homeroom');
-		$('#period-number').css('font-size', '28');
+		$('#period-number').html('HR');
+		$('#period-number').css('font-size', '42');
 		$('#time-full').html('7:45-7:50');
 	}
 	else if(h === 7 && m >= 54 || h === 8 && m < 40){
@@ -276,8 +276,8 @@ function halfDayTime(){
 	}
 	else if(h === 7 && m >= 45 && m < 54){
 		$('#period-half').html("Period:");
-		$('#period-number-half').html('Homeroom');
-		$('#period-number-half').css('font-size', '28');
+		$('#period-number-half').html('HR');
+		$('#period-number-half').css('font-size', '42');
 		$('#time-half').html('7:45-7:50');
 	}
 	else if(h === 7 && m >= 54 || h === 8 && m < 28){
