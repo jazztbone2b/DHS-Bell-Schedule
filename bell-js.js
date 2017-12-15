@@ -185,6 +185,11 @@ function fullDayTime(){
 		$('#period-number').html('');
 		$('#time-full').html('');
 	}
+	else if(h === 6 || h === 7 && m < 45){
+		$('#period').html('Good Morning!');
+		$('#period-number').html('');
+		$('#time-full').html('');
+	}
 	else if(h === 7 && m >= 45 && m < 54){
 		$('#period').html("Period:");
 		$('#period-number').html('HR');
@@ -271,6 +276,11 @@ function halfDayTime(){
 	if(day === 0 || day === 6){
 		$('#period-half').html("It's the weekend!");
 		$('#period-half').css('font-size', '32px');
+		$('#period-number-half').html('');
+		$('#time-half').html('');
+	}
+	else if(h === 6 || h === 7 && m < 45){
+		$('#period-half').html('Good Morning!');
 		$('#period-number-half').html('');
 		$('#time-half').html('');
 	}
