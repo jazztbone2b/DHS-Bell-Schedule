@@ -117,6 +117,7 @@ function checkFullDay(){
 
 		case 6:
 		day = 'Saturday';
+		$('#day').html(day);
 		break;
 	}
 	fullDayTime();
