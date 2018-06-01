@@ -354,12 +354,18 @@ function clickDropdown(){
 	$('#dropdown').click(function(){
 		$('#dropdown-content').toggle();
 		$('#display-schedule').hide();
+		$('#complete-full').toggle();
+		$('#complete-half').toggle();
+		$('#full-day-schedule').hide();
+		$('#half-day-schedule').hide();
 	});
 }
 
 function clickFull(){
 	$('#full').click(function(){
 		checkFullDay();
+		$('#complete-full').show();
+		$('#complete-half').show();
 	});
 }
 
@@ -367,6 +373,23 @@ function clickHalf(){
 	$('#half').click(function(){
 		checkHalfDay();
 		$('#dropdown').html('Half Day');
+		$('#complete-full').show();
+		$('#complete-half').show();
 	});
 }
-window.onload = startTime(), checkFullDay(), fullDayTime(), halfDayTime(), clickDropdown(), clickFull(), clickHalf();
+
+function fullDayClick(){
+	$('#complete-full').click(function(){
+		$('#full-day-schedule').toggle();
+		$('#half-day-schedule').hide();
+	});
+}
+
+function halfDayClick(){
+	$('#complete-half').click(function(){
+		$('#half-day-schedule').toggle();
+		$('#full-day-schedule').hide();
+	})
+}
+window.onload = startTime(), checkFullDay(), fullDayTime(), halfDayTime(), clickDropdown(), 
+clickFull(), clickHalf(), fullDayClick(), halfDayClick();

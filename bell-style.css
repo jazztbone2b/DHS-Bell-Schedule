@@ -87,6 +87,7 @@ body{
 	height: 20px;
 	cursor: pointer;
 	width: 100px;
+	border-radius: 2px;
 }
 #dropdown-content{
 	display: none;
@@ -107,4 +108,54 @@ body{
 #full:hover, #half:hover{
 	background-color: #ff671f;
 	color: white;
+}
+
+/* Full Schedules */
+#flex-cont{
+	margin-top: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+#complete-full{
+	float: left;
+	background-color: black;
+	color: white;
+	border: none;
+	height: 20px;
+	cursor: pointer;
+	width: 40px;
+	height: 18px;
+	border-radius: 2px;
+}
+#complete-half{
+	float: right;
+	background-color: black;
+	color: white;
+	border: none;
+	height: 20px;
+	cursor: pointer;
+	width: 40px;
+	height: 18px;
+	border-radius: 2px;
+}
+
+#full-day-schedule, #half-day-schedule{
+	display: none;
+	background-color: #ff671f;
+	color: black;
+	margin-top: 2px;
+	font-size: 16px;
+	border: 5px solid black;
+	border-radius: 5px;
+}
+#full-text{
+	text-align: center;
+	border-bottom: 1px solid black;
+	margin-top: 2px;
+}
+#full-day-schedule>ul, #half-day-schedule>ul{
+	margin-left: -20px;
+}
+#full-day-schedule>ul>li, #half-day-schedule>ul>li{
+	list-style-type: none;
 }
